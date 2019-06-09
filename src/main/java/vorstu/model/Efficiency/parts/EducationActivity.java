@@ -22,6 +22,8 @@ public class EducationActivity extends BaseEntity  implements BasePart{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private Float mean;
+
     @OneToMany(mappedBy = "educationActivity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Efficiency> efficiencies;
 

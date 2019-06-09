@@ -23,24 +23,12 @@ public class Efficiency extends BaseEntity {
     private EducationActivity educationActivity;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "employment_id")
-    private Employment employment;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "financialActivity_id")
-    private FinancialActivity financialActivity;
-
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "internationalActivity_id")
     private InternationalActivity internationalActivity;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "researchActivity_id")
     private ResearchActivity researchActivity;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "staff_id")
-    private Staff staff;
 
 
 }
