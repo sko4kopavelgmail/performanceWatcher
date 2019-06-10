@@ -496,13 +496,24 @@
                         <tr>
                             <th scope="row">22</th>
                             <td>
-                                <label for="2420317">
+                                <label for="2420417">
                                     Общая численность студентов, обучающихся по направлениям подготовки "Инженерное
                                     дело,технологиии технические науки","Здравоохранение и медицинские
                                     науки","Образование и педагогические науки", заключившие договоры о целевом обучении
                                 </label>
                             </td>
-                            <td><input type="text" id="2420317" name="2420317"></td>
+                            <td><input type="text" id="2420417" name="2420417"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">23</th>
+                            <td>
+                                <label for="2420412">
+                                    Общая численность студентов, обучающихся по направлениям подготовки "Инженерное
+                                    дело,технологиии технические науки","Здравоохранение и медицинские
+                                    науки","Образование и педагогические науки"
+                                </label>
+                            </td>
+                            <td><input type="text" id="2420412" name="2420412"></td>
                         </tr>
                     </table>
                     <h4 class="mt-4">Общая характеристика основных образовательных программ и подготовки научных кадров,
@@ -552,15 +563,15 @@
                         </tr>
                         <tr>
                             <th scope="row">Интернатуры</th>
+                            <th><input type="text" name="21097"></th>
                             <th><input type="text" name="21098"></th>
                             <th><input type="text" name="21099"></th>
-                            <th><input type="text" name="21097"></th>
                         </tr>
                         <tr>
                             <th scope="row">Ординатуры</th>
-                            <th><input type="text" name="210108"></th>
-                            <th><input type="text" name="210109"></th>
-                            <th><input type="text" name="210107"></th>
+                            <th><input type="text" name="211007"></th>
+                            <th><input type="text" name="211008"></th>
+                            <th><input type="text" name="211009"></th>
                         </tr>
                     </table>
                     <h4 class="mt-4">Распределение приема граждан иностранных государств в соответствии с
@@ -616,13 +627,6 @@
                             <th scope="row">Магистратура</th>
                             <th><input type="text" name="2450312"></th>
                             <th><input type="text" name="2450314"></th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Всего по программам
-                                высшего образования
-                            </th>
-                            <th><input type="text" name="2450412"></th>
-                            <th><input type="text" name="2450414"></th>
                         </tr>
                         <tr>
                             <th scope="row">

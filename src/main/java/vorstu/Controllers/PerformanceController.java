@@ -27,35 +27,15 @@ public class PerformanceController {
     }
 
 
-    /**
-     * Загрузка страницы с выбором подсчитываемой статистики
-     * @return страница
-     */
-    @GetMapping("/calculatePerformance")
-    public String loadCalculatePage(Model model){
-        return "calculatePerformance";
-    }
-
-    /**
-     * Получение данных со страницы с выбором подсчитываемой статистики
-     * @param form форма
-     * @return переход на страницу с вводом данных
-     */
-    @PostMapping("/calculatePerformance")
-    public String getCalculatePage(@RequestParam Map<String,String> form){
-        return "performance";
-    }
-
-
     @GetMapping("/input")
-    public String loadInputPage(){
+    public String loadCalculatePage(){
         return "input";
     }
 
     @PostMapping("/input")
-    public String getInputPage(@RequestParam Map<String, String> f){
-
-        return "redirect:/calculatePerformance";
+    public String getInputPage(@RequestParam Map<String, String> form){
+        calculateService.calculateEfficiency(form);
+        return "redirect:/performance";
     }
 
 }
