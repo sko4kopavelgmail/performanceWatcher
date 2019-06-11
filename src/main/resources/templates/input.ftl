@@ -496,21 +496,39 @@
                         <tr>
                             <th scope="row">22</th>
                             <td>
-                                <label for="2420417">
+                                <label for="2420417E">
                                     Общая численность студентов, обучающихся по направлениям подготовки "Инженерное
                                     дело,технологиии технические науки","Здравоохранение и медицинские
                                     науки","Образование и педагогические науки", заключившие договоры о целевом обучении
                                 </label>
                             </td>
-                            <td><input type="text" id="2420417" name="2420417"></td>
+                            <td><input type="text" id="2420417E" name="2420417E"></td>
                         </tr>
                         <tr>
                             <th scope="row">23</th>
                             <td>
-                                <label for="2420412">
+                                <label for="2420412E">
                                     Общая численность студентов, обучающихся по направлениям подготовки "Инженерное
                                     дело,технологиии технические науки","Здравоохранение и медицинские
                                     науки","Образование и педагогические науки"
+                                </label>
+                            </td>
+                            <td><input type="text" id="2420412E" name="2420412E"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">24</th>
+                            <td>
+                                <label for="2420417">
+                                    Общая численность студентов, заключившие договоры о целевом обучении
+                                </label>
+                            </td>
+                            <td><input type="text" id="2420417" name="2420417"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">25</th>
+                            <td>
+                                <label for="2420412">
+                                    Общая численность студентов
                                 </label>
                             </td>
                             <td><input type="text" id="2420412" name="2420412"></td>
@@ -637,6 +655,13 @@
                             <th><input type="text" name="2450412E"></th>
                             <th></th>
                         </tr>
+                        <tr>
+                            <th scope="row">
+                                Всего по программам высшего образования
+                            </th>
+                            <th><input type="text" name="2450412"></th>
+                            <th></th>
+                        </tr>
                     </table>
                     <h4 class="mt-4">
                         Численность обучающихся по программам подготовки кадров высшей квалификации
@@ -698,7 +723,6 @@
                             <th><input type="text" name="260105"></th>
                         </tr>
                     </table>
-
                 </div>
             </div>
         </div>
@@ -857,7 +881,7 @@
                         <tr>
                             <th scope="row">2</th>
                             <td>
-                                <label for="610603">Внебюджетные средства (всего)</label>
+                                <label for="610610">Внебюджетные средства (всего)</label>
                             </td>
                             <td></td>
                             <td></td>
@@ -978,6 +1002,7 @@
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="card">
                 <div class="card-body">
+
                     <h4 class="mt-4">Распределение численности студентов, приема и выпуска по гражданству</h4>
                     <table class="mt-2 table table-striped">
                         <thead>
@@ -1007,63 +1032,73 @@
                         <tr>
                             <th scope="row">1</th>
                             <td>
-                                <label for="2470409">
+                                <label>
                                     Студенты, обучающиеся на условиях общего
                                     приема, в том числе лица без гражданства
-                                    <div class="help"
-                                         data-title="Код государства по ОКСМ не должен равняться 031,051,112,398,417,498,762,795,860,804">
-                                        *
-                                    </div>
                                 </label>
                             </td>
-                            <td><input size="4" type="text" id="2470409sO" name="2470409sO"></td>
-                            <td><input size="4" type="text" id="2470409sV" name="2470409sV"></td>
-                            <td><input size="4" type="text" id="2470409sZ" name="2470409sZ"></td>
-                            <td><input size="4" type="text" id="2470409vO" name="2470409vO"></td>
-                            <td><input size="4" type="text" id="2470409vV" name="2470409vV"></td>
-                            <td><input size="4" type="text" id="2470409vZ" name="2470409vZ"></td>
+                            <td><input size="4" type="text" id="2470409O" name="2470409O"></td>
+                            <td><input size="4" type="text" id="2470409V" name="2470409V"></td>
+                            <td><input size="4" type="text" id="2470409Z" name="2470409Z"></td>
+                            <td><input size="4" type="text" id="2470414O" name="2470414O"></td>
+                            <td><input size="4" type="text" id="2470414V" name="2470414V"></td>
+                            <td><input size="4" type="text" id="2470414Z" name="2470414Z"></td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>
-                                <label for="2470709">
-                                    Студенты, обучающиеся на условиях общего
-                                    приема, в том числе лица без гражданства
-                                    <div class="help"
-                                         data-title="Код государства по ОКСМ не должен равняться 031,051,112,398,417,498,762,795,860,804">
-                                        *
-                                    </div>
+                                <label>
+                                    Иностранные граждане и лица без
+                                    гражданства, обучающиеся в соответствии с
+                                    международными договорами РФ, с
+                                    федеральными законами или установленной
+                                    Правительством РФ квотой, в том числе лица без гражданства
                                 </label>
                             </td>
-                            <td><input size="4" type="text" id="2470709sO" name="2470709sO"></td>
-                            <td><input size="4" type="text" id="2470709sV" name="2470709sV"></td>
-                            <td><input size="4" type="text" id="2470709sZ" name="2470709sZ"></td>
-                            <td><input size="4" type="text" id="2470709vO" name="2470709vO"></td>
-                            <td><input size="4" type="text" id="2470709vV" name="2470709vV"></td>
-                            <td><input size="4" type="text" id="2470709vZ" name="2470709vZ"></td>
+                            <td><input size="4" type="text" id="2470709O" name="2470709O"></td>
+                            <td><input size="4" type="text" id="2470709V" name="2470709V"></td>
+                            <td><input size="4" type="text" id="2470709Z" name="2470709Z"></td>
+                            <td><input size="4" type="text" id="2470714O" name="2470714O"></td>
+                            <td><input size="4" type="text" id="2470714V" name="2470714V"></td>
+                            <td><input size="4" type="text" id="2470714Z" name="2470714Z"></td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td>
-                                <label for="2470309">
+                                <label>
                                     Граждане иностранных государств – всего
-                                    <div class="help"
-                                         data-title="Код государства по ОКСМ не должен равняться 031,051,112,398,417,498,762,795,860,804">
-                                        *
-                                    </div>
                                 </label>
                             </td>
-                            <td><input size="4" type="text" id="2470309sO" name="2470309sO"></td>
-                            <td><input size="4" type="text" id="2470309sV" name="2470309sV"></td>
-                            <td><input size="4" type="text" id="2470309sZ" name="2470309sZ"></td>
-                            <td><input size="4" type="text" id="2470309vO" name="2470309vO"></td>
-                            <td><input size="4" type="text" id="2470309vV" name="2470309vV"></td>
-                            <td><input size="4" type="text" id="2470309vZ" name="2470309vZ"></td>
+                            <td><input size="4" type="text" id="2470309O" name="2470309O"></td>
+                            <td><input size="4" type="text" id="2470309V" name="2470309V"></td>
+                            <td><input size="4" type="text" id="2470309Z" name="2470309Z"></td>
+                            <td><input size="4" type="text" id="2470314O" name="2470314O"></td>
+                            <td><input size="4" type="text" id="2470314V" name="2470314V"></td>
+                            <td><input size="4" type="text" id="2470314Z" name="2470314Z"></td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
                             <td>
-                                <label for="2470609">
+                                <label>
+                                    Иностранные граждане и лица без
+                                    гражданства, обучающиеся в соответствии с
+                                    международными договорами РФ, с
+                                    федеральными законами или установленной
+                                    Правительством РФ квотой в том числе:
+                                    граждане иностранных государств
+                                </label>
+                            </td>
+                            <td><input size="4" type="text" id="2470609O" name="2470609O"></td>
+                            <td><input size="4" type="text" id="2470609V" name="2470609V"></td>
+                            <td><input size="4" type="text" id="2470609Z" name="2470609Z"></td>
+                            <td><input size="4" type="text" id="2470614O" name="2470614O"></td>
+                            <td><input size="4" type="text" id="2470614V" name="2470614V"></td>
+                            <td><input size="4" type="text" id="2470614Z" name="2470614Z"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>
+                                <label>
                                     Иностранные граждане и лица без
                                     гражданства, обучающиеся в соответствии с
                                     международными договорами РФ, с
@@ -1071,20 +1106,79 @@
                                     Правительством РФ квотой в том числе:
                                     граждане иностранных государств
                                     <div class="help"
-                                         data-title="Код государства по ОКСМ не должен равняться 031,051,112,398,417,498,762,795,860,804">
+                                         data-title="Код государства по ОКСМ НЕ должен равняться 031,051,112,398,417,498,762,795,860,804">
                                         *
                                     </div>
                                 </label>
                             </td>
-                            <td><input size="4" type="text" id="2470609sO" name="2470609sO"></td>
-                            <td><input size="4" type="text" id="2470609sV" name="2470609sV"></td>
-                            <td><input size="4" type="text" id="2470609sZ" name="2470609sZ"></td>
-                            <td><input size="4" type="text" id="2470609vO" name="2470609vO"></td>
-                            <td><input size="4" type="text" id="2470609vV" name="2470609vV"></td>
-                            <td><input size="4" type="text" id="2470609vZ" name="2470609vZ"></td>
+                            <td><input size="4" type="text" id="2470609ON" name="2470609ON"></td>
+                            <td><input size="4" type="text" id="2470609VN" name="2470609VN"></td>
+                            <td><input size="4" type="text" id="2470609ZN" name="2470609ZN"></td>
+                            <td><input size="4" type="text" id="2470614ON" name="2470614ON"></td>
+                            <td><input size="4" type="text" id="2470614VN" name="2470614VN"></td>
+                            <td><input size="4" type="text" id="2470614ZN" name="2470614ZN"></td>
                         </tr>
-
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>
+                                <label>
+                                    Граждане иностранных государств – всего
+                                    <div class="help"
+                                         data-title="Код государства по ОКСМ НЕ должен равняться 031,051,112,398,417,498,762,795,860,804">
+                                        *
+                                    </div>
+                                </label>
+                            </td>
+                            <td><input size="4" type="text" id="2470309ON" name="2470309ON"></td>
+                            <td><input size="4" type="text" id="2470309VN" name="2470309VN"></td>
+                            <td><input size="4" type="text" id="2470309ZN" name="2470309ZN"></td>
+                            <td><input size="4" type="text" id="2470314ON" name="2470314ON"></td>
+                            <td><input size="4" type="text" id="2470314VN" name="2470314VN"></td>
+                            <td><input size="4" type="text" id="2470314ZN" name="2470314ZN"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>
+                                <label>
+                                    Иностранные граждане и лица без
+                                    гражданства, обучающиеся в соответствии с
+                                    международными договорами РФ, с
+                                    федеральными законами или установленной
+                                    Правительством РФ квотой в том числе:
+                                    граждане иностранных государств
+                                    <div class="help"
+                                         data-title="Код государства по ОКСМ ДОЛЖЕН равняться 031,051,112,398,417,498,762,795,860,804">
+                                        *
+                                    </div>
+                                </label>
+                            </td>
+                            <td><input size="4" type="text" id="2470609OP" name="2470609OP"></td>
+                            <td><input size="4" type="text" id="2470609VP" name="2470609VP"></td>
+                            <td><input size="4" type="text" id="2470609ZP" name="2470609ZP"></td>
+                            <td><input size="4" type="text" id="2470614OP" name="2470614OP"></td>
+                            <td><input size="4" type="text" id="2470614VP" name="2470614VP"></td>
+                            <td><input size="4" type="text" id="2470614ZP" name="2470614ZP"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>
+                                <label for="2470309">
+                                    Граждане иностранных государств – всего
+                                    <div class="help"
+                                         data-title="Код государства по ОКСМ ДОЛЖЕН равняться 031,051,112,398,417,498,762,795,860,804">
+                                        *
+                                    </div>
+                                </label>
+                            </td>
+                            <td><input size="4" type="text" id="2470309OP" name="2470309OP"></td>
+                            <td><input size="4" type="text" id="2470309VP" name="2470309VP"></td>
+                            <td><input size="4" type="text" id="2470309ZP" name="2470309ZP"></td>
+                            <td><input size="4" type="text" id="2470314OP" name="2470314OP"></td>
+                            <td><input size="4" type="text" id="2470314VP" name="2470314VP"></td>
+                            <td><input size="4" type="text" id="2470314ZP" name="2470314ZP"></td>
+                        </tr>
                     </table>
+
                     <h4 class="mt-4">Распределение численности студентов образовательной организации, обучающихся по
                         очной форме обучения, прошедших обучение в других образовательных
                         организациях
@@ -1129,14 +1223,6 @@
                             </td>
                             <th><input type="text" name="2480411" id="2480411"></th>
                         </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td> Кроме того: численность студентов других вузов, прошедших обучение в вузе в
-                                учебном году, заканчивающемся в отчетном, длительностью менее семестра (триместра)
-                                из российских вузов
-                            </td>
-                            <th><input type="text" name="2480412" id="2480412"></th>
-                        </tr>
                     </table>
                     <h4 class="mt-4">Сведения об иностранных работниках</h4>
                     <table class="mt-2 table table-striped">
@@ -1152,6 +1238,12 @@
                                 совместительства (внешние совместители)работающих в образовательной
                                 организации не менее 1 семестра
                             </th>
+                            <th>Численность иностранных работников (без внешних совместителей и работающих по
+                                договорам гражданскоправового характера)
+                            </th>
+                            <th>Численность иностранных работников, работающих на условиях штатного
+                                совместительства (внешние совместители)
+                            </th>
                         </tr>
                         </thead>
                         <tr>
@@ -1161,6 +1253,8 @@
                             </td>
                             <th><input type="text" name="430106" id="430106"></th>
                             <th><input type="text" name="430110" id="430110"></th>
+                            <th><input type="text" name="430103" id="430103"></th>
+                            <th><input type="text" name="430107" id="430107"></th>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
@@ -1169,6 +1263,49 @@
                             </td>
                             <th><input type="text" name="430306" id="430306"></th>
                             <th><input type="text" name="430310" id="430310"></th>
+                            <th><input type="text" name="430303" id="430303"></th>
+                            <th><input type="text" name="430307" id="430307"></th>
+
+                        </tr>
+                    </table>
+                    <h4 class="mt-4">Распределение численности основного персонала и внешних совместителей по уровню
+                        образования</h4>
+                    <table class="mt-2 table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Сотрудник</th>
+                            <th scope="col">Численность</th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                Руководящий персонал, профессорско-преподавательский состав, деканы факультетов
+                            </td>
+                            <th><input type="text" name="4110403" id="4110403"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>
+                                Руководящий персонал, научные работники
+                            </td>
+                            <th><input type="text" name="4110415" id="4110415"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>
+                                Руководящий персонал, профессорско-преподавательский состав, деканы факультетов (Внешние
+                                совместители)
+                            </td>
+                            <th><input type="text" name="4120403" id="4120403"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>
+                                Руководящий персонал, научные работники (Внешние совместители)
+                            </td>
+                            <th><input type="text" name="4120415" id="4120415"></th>
                         </tr>
                     </table>
                     <h4 class="mt-4"> Численность обучающихся по программам подготовки кадров высшей квалификации, прием

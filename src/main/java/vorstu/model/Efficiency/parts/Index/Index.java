@@ -28,4 +28,12 @@ public class Index {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "activity_id")
     private EducationActivity educationActivity;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "research_id")
+    private EducationActivity researchActivity;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "international_id")
+    private EducationActivity internationalActivity;
 }

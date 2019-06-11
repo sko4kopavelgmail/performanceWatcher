@@ -242,12 +242,12 @@ public class CalculateService {
         educationActivity.addIndex(getIndex(mean, "1.14", Constants._114, Constants._percent));
 
         //1.15
-        Double _2420417 = getDoubleFromString(form.get("2420417"));
-        Double _2420412 = getDoubleFromString(form.get("2420412"));
+        Double _2420417E = getDoubleFromString(form.get("2420417E"));
+        Double _2420412E = getDoubleFromString(form.get("2420412E"));
         Double _2450412E = getDoubleFromString(form.get("2450412E"));
-        mean = _2420417 / (_2420412 + _2450412E);
+        mean = _2420417E / (_2420412E + _2450412E);
         mean *= 100;
-        educationActivity.addIndex(getIndex(mean,"1.15",Constants._115,Constants._percent));
+        educationActivity.addIndex(getIndex(mean, "1.15", Constants._115, Constants._percent));
 
         return educationActivity;
     }
@@ -287,7 +287,167 @@ public class CalculateService {
 
     public InternationalActivity calculateInternationalActivity(Map<String, String> form) {
         InternationalActivity internationalActivity = new InternationalActivity();
+        Double mean, numerator, denumerator;
 
+        //3.1
+        Double _2470409O = getDoubleFromString(form.get("2470409O"));
+        Double _2470409V = getDoubleFromString(form.get("2470409V"));
+        Double _2470409Z = getDoubleFromString(form.get("2470409Z"));
+
+        Double _2470709O = getDoubleFromString(form.get("2470709O"));
+        Double _2470709V = getDoubleFromString(form.get("2470709V"));
+        Double _2470709Z = getDoubleFromString(form.get("2470709Z"));
+
+        Double _2470309ON = getDoubleFromString(form.get("2470309ON"));
+        Double _2470309VN = getDoubleFromString(form.get("2470309VN"));
+        Double _2470309ZN = getDoubleFromString(form.get("2470309ZN"));
+
+        Double _2470609ON = getDoubleFromString(form.get("2470609ON"));
+        Double _2470609VN = getDoubleFromString(form.get("2470609VN"));
+        Double _2470609ZN = getDoubleFromString(form.get("2470609ZN"));
+
+        mean = _2470409O + 0.25 * _2470409V + 0.1 * _2470409Z;
+        mean += _2470709O + 0.25 * _2470709V + 0.1 * _2470709Z;
+        mean += _2470309ON + 0.25 * _2470309VN + 0.1 * _2470309ZN;
+        mean += _2470609ON + 0.25 * _2470609VN + 0.1 * _2470609ZN;
+        mean /= SS;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean, "3.1", Constants._31, Constants._percent));
+
+        //3.2
+        Double _2470309OP = getDoubleFromString(form.get("2470309OP"));
+        Double _2470309VP = getDoubleFromString(form.get("2470309VP"));
+        Double _2470309ZP = getDoubleFromString(form.get("2470309ZP"));
+
+        Double _2470609OP = getDoubleFromString(form.get("2470609OP"));
+        Double _2470609VP = getDoubleFromString(form.get("2470609VP"));
+        Double _2470609ZP = getDoubleFromString(form.get("2470609ZP"));
+
+        mean = _2470309OP + 0.25 * _2470309VP + 0.1 * _2470309ZP;
+        mean += _2470609OP + 0.25 * _2470609VP + 0.1 * _2470609ZP;
+        mean /= SS;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean, "3.2", Constants._32, Constants._percent));
+
+        //3.3
+        Double _2470414O = getDoubleFromString(form.get("2470414O"));
+        Double _2470414V = getDoubleFromString(form.get("2470414V"));
+        Double _2470414Z = getDoubleFromString(form.get("2470414Z"));
+
+        Double _2470714O = getDoubleFromString(form.get("2470714O"));
+        Double _2470714V = getDoubleFromString(form.get("2470714V"));
+        Double _2470714Z = getDoubleFromString(form.get("2470714Z"));
+
+        Double _2470314O = getDoubleFromString(form.get("2470314O"));
+        Double _2470314V = getDoubleFromString(form.get("2470314V"));
+        Double _2470314Z = getDoubleFromString(form.get("2470314Z"));
+
+        Double _2470614O = getDoubleFromString(form.get("2470614O"));
+        Double _2470614V = getDoubleFromString(form.get("2470614V"));
+        Double _2470614Z = getDoubleFromString(form.get("2470614Z"));
+
+        mean = _2470414O + 0.25 * _2470414V + 0.1 * _2470414Z;
+        mean += _2470714O + 0.25 * _2470714V + 0.1 * _2470714Z;
+        mean += _2470314O + 0.25 * _2470314V + 0.1 * _2470314Z;
+        mean += _2470614O + 0.25 * _2470614V + 0.1 * _2470614Z;
+        mean /= VV;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean, "3.3", Constants._33, Constants._percent));
+
+        //3.4
+        mean = _2470414O + 0.25 * _2470414V + 0.1 * _2470414Z;
+        mean += _2470714O + 0.25 * _2470714V + 0.1 * _2470714Z;
+        mean += _2470309ON + 0.25 * _2470309VN + 0.1 * _2470309ZN;
+        mean += _2470609ON + 0.25 * _2470609VN + 0.1 * _2470609ZN;
+        mean /= VV;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean, "3.4", Constants._34, Constants._percent));
+
+        //3.5
+        mean = _2470414O + 0.25 * _2470414V + 0.1 * _2470414Z;
+        mean += _2470714O + 0.25 * _2470714V + 0.1 * _2470714Z;
+        mean += _2470309OP + 0.25 * _2470309VP + 0.1 * _2470309ZP;
+        mean += _2470609OP + 0.25 * _2470609VP + 0.1 * _2470609ZP;
+        mean /= VV;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean, "3.5", Constants._35, Constants._percent));
+
+        //3.6
+        Double _2480404 = getDoubleFromString(form.get("2480404"));
+        Double _2480405 = getDoubleFromString(form.get("2480405"));
+        Double _2420412 = getDoubleFromString(form.get("2420412"));
+        Double _2450412 = getDoubleFromString(form.get("2450412"));//430103
+        numerator = _2480404 + _2480405;
+        denumerator = _2420412 + _2450412;
+        mean = numerator / denumerator;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean, "3.6", Constants._36, Constants._percent));
+
+        //3.7
+        Double _2480410 = getDoubleFromString(form.get("2480410"));
+        Double _2480411 = getDoubleFromString(form.get("2480411"));
+        numerator = _2480410 + _2480411;
+        mean = numerator / denumerator;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean, "3.7", Constants._37, Constants._un));
+
+        //3.8
+        Double _430103 = getDoubleFromString(form.get("430103"));
+        Double _430107 = getDoubleFromString(form.get("430107"));
+        Double _430303 = getDoubleFromString(form.get("430303"));
+        Double _430307 = getDoubleFromString(form.get("430307"));
+        Double _4110403 = getDoubleFromString(form.get("4110403"));
+        Double _4110415 = getDoubleFromString(form.get("4110415"));
+        Double _4120403 = getDoubleFromString(form.get("4120403"));
+        Double _4120415 = getDoubleFromString(form.get("4120415"));
+        numerator = _430103 + _430107 + _430303 + _430307;
+        denumerator = _4110403 + _4110415 + _4120403 + _4120415;
+        mean = numerator / denumerator;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean, "3.8", Constants._38, Constants._percent));
+
+        //3.9
+        Double _430106 = getDoubleFromString(form.get("430106"));
+        Double _430110 = getDoubleFromString(form.get("430110"));
+        Double _430306 = getDoubleFromString(form.get("430306"));
+        Double _430310 = getDoubleFromString(form.get("430310"));
+        mean = _430106 + _430110 + _430306 + _430310;
+        internationalActivity.addIndex(getIndex(mean, "3.9", Constants._39, Constants._person));
+
+        //3.10
+        Double _2510114 = getDoubleFromString(form.get("2510114"));
+        Double _2510116 = getDoubleFromString(form.get("2510116"));
+        Double _2510214 = getDoubleFromString(form.get("2510214"));
+        Double _2510216 = getDoubleFromString(form.get("2510216"));
+        Double _2510314 = getDoubleFromString(form.get("2510314"));
+        Double _2510316 = getDoubleFromString(form.get("2510316"));
+
+        Double _210806 = getDoubleFromString(form.get("210806"));
+        Double _210906 = getDoubleFromString(form.get("210906"));
+        Double _211006 = getDoubleFromString(form.get("211006"));
+        numerator = _2510114 - _2510116;
+        numerator += _2510214 - _2510216;
+        numerator += _2510314 - _2510316;
+        denumerator = _210806 + _210906 + _211006;
+        mean = numerator / denumerator;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean,"3.10",Constants._310,Constants._percent));
+
+        //3.11
+        numerator = _2510114 +_2510214 +_2510314;
+        mean = numerator / denumerator;
+        mean *= 100;
+        internationalActivity.addIndex(getIndex(mean,"3.11",Constants._311,Constants._percent));
+
+        //3.12
+        Double _611010 = getDoubleFromString(form.get("611010"));
+        mean = _611010;
+        internationalActivity.addIndex(getIndex(mean, "3.12", Constants._312, Constants._thousand));
+
+        //3.13
+        Double _611004 = getDoubleFromString(form.get("611004"));
+        mean = _611004;
+        internationalActivity.addIndex(getIndex(mean, "3.13", Constants._313, Constants._thousand));
 
         return internationalActivity;
     }
@@ -295,6 +455,112 @@ public class CalculateService {
     public ResearchActivity calculateResearchActivity(Map<String, String> form) {
         ResearchActivity researchActivity = new ResearchActivity();
 
+        //2.1
+        Double _324191 = getDoubleFromString(form.get("324191"));
+        Double mean = _324191 / R;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.1", Constants._21, Constants._un));
+
+        //2.2
+        Double _324021 = getDoubleFromString(form.get("324021"));
+        mean = _324021 / R;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.2", Constants._22, Constants._un));
+
+        //2.3
+        Double _324022 = getDoubleFromString(form.get("324022"));
+        mean = _324022 / R;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.3", Constants._22, Constants._un));
+
+        //2.4
+        Double _324023 = getDoubleFromString(form.get("324023"));
+        mean = _324023 / R;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.4", Constants._24, Constants._un));
+
+        //2.5
+        Double _324043 = getDoubleFromString(form.get("324043"));
+        mean = _324043 / R;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.5", Constants._25, Constants._un));
+
+        //2.6
+        Double _324053 = getDoubleFromString(form.get("324053"));
+        mean = _324053 / R;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.6", Constants._26, Constants._un));
+
+        //2.7
+        Double _321023 = getDoubleFromString(form.get("321023"));
+        mean = _321023;
+        researchActivity.addIndex(getIndex(mean, "2.7", Constants._27, Constants._thousand));
+
+        //2.8
+        Double _610110 = getDoubleFromString(form.get("610110"));
+        Double _610103 = getDoubleFromString(form.get("610103"));
+        mean = _610110 / _610103;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.8", Constants._28, Constants._percent));
+
+        //2.9
+        Double _321024 = getDoubleFromString(form.get("321024"));
+        mean = _321024 / _321023;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.9", Constants._29, Constants._percent));
+
+        //2.10
+        Double _610610 = getDoubleFromString(form.get("610610"));
+        mean = _610610 / R;
+        researchActivity.addIndex(getIndex(mean, "2.10", Constants._210, Constants._thousand));
+
+        //2.11
+        Double _32606 = getDoubleFromString(form.get("32606"));
+        mean = _32606;
+        researchActivity.addIndex(getIndex(mean, "2.11", Constants._211, Constants._un));
+
+        //2.12
+        Double _610112 = getDoubleFromString(form.get("610112"));
+        mean = _610112 / _610103;
+        researchActivity.addIndex(getIndex(mean, "2.12", Constants._212, Constants._percent));
+
+        //2.13
+        Double _450203 = getDoubleFromString(form.get("450203"));
+        Double _450204 = getDoubleFromString(form.get("450204"));
+        Double _450303 = getDoubleFromString(form.get("450303"));
+        Double _450304 = getDoubleFromString(form.get("450304"));
+        Double _450403 = getDoubleFromString(form.get("450403"));
+        Double _450404 = getDoubleFromString(form.get("450404"));
+        Double _450103 = getDoubleFromString(form.get("450103"));
+        Double _450104 = getDoubleFromString(form.get("450104"));
+        Double numerator = _450203 + _450204 + _450303 + _450304 + _450403 + _450404;
+        Double denumerator = _450103 + _450104;
+        mean = numerator / denumerator;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.13", Constants._213, Constants._percent));
+
+        //2.14
+        Double _440403 = getDoubleFromString(form.get("440403"));
+        Double _440405 = getDoubleFromString(form.get("440405"));
+        Double _440407 = getDoubleFromString(form.get("440407"));
+        Double _440503 = getDoubleFromString(form.get("440503"));
+        Double _440505 = getDoubleFromString(form.get("440505"));
+        Double _440507 = getDoubleFromString(form.get("440507"));
+        numerator = _440405 + _440407 + _440505 + _440507;
+        denumerator = _440403 + _440503;
+        mean = numerator / denumerator;
+        mean *= 100;
+        researchActivity.addIndex(getIndex(mean, "2.14", Constants._214, Constants._percent));
+
+        //2.15
+        Double _32425 = getDoubleFromString(form.get("32425"));
+        mean = _32425;
+        researchActivity.addIndex(getIndex(mean, "2.15", Constants._215, Constants._un));
+
+        //2.16
+        Double _3241603 = getDoubleFromString(form.get("3241603"));
+        mean = _3241603 / R;
+        researchActivity.addIndex(getIndex(mean, "2.16", Constants._216, Constants._un));
 
         return researchActivity;
     }
@@ -303,7 +569,11 @@ public class CalculateService {
         form.remove("_csrf");
         calculateConstants(form);
         EducationActivity educationActivity = calculateEducationActivity(form);
+        ResearchActivity researchActivity = calculateResearchActivity(form);
+        InternationalActivity internationalActivity = calculateInternationalActivity(form);
         educationActivityRepo.save(educationActivity);
+        researchActivityRepo.save(researchActivity);
+        internationalActivityRepo.save(internationalActivity);
     }
 
     private void calculateConstants(Map<String, String> form) {

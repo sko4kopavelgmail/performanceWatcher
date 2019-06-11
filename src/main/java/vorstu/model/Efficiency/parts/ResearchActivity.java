@@ -6,6 +6,7 @@ import lombok.Setter;
 import vorstu.Exception.MyException;
 import vorstu.model.BaseEntity.BaseEntity;
 import vorstu.model.Efficiency.Efficiency;
+import vorstu.model.Efficiency.parts.Index.Index;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -21,6 +22,26 @@ public class ResearchActivity extends BaseEntity implements BasePart{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    private String shortName;
+
+    private String name;
+
+    private Double mean;
+
+    private Double minMean;
+
+    @OneToMany(mappedBy = "researchActivity", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Index> indices;
+
+    public void addIndex(Index index) {
+        if (Objects.isNull(indices)) {
+            indices = new ArrayList<>();
+        }
+        if (Objects.nonNull(index)) {
+            indices.add(index);
+        }
+    }
 
     @OneToMany(mappedBy = "researchActivity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Efficiency> efficiencies;
