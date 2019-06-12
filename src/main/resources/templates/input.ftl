@@ -1,6 +1,26 @@
 <#import "parts/common.ftl" as common>
 <@common.page>
 <form action="/input" method="post">
+    <div class="mt-3 mb-3 form-inline">
+        <label class="mr-2">Показатели для</label>
+        <select name="direction" class="custom-select">
+            <#list directions as direction>
+                <option value="${direction.id}">${direction.name}</option>
+            </#list>
+        </select>
+
+        <div class="ml-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Отчетный год</span>
+                </div>
+                <input type="text" class="form-control" placeholder="2019">
+                <div class="input-group-append">
+                    <span class="input-group-text">Год</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"

@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import vorstu.Exception.MyException;
 import vorstu.model.BaseEntity.BaseEntity;
+import vorstu.model.Efficiency.Efficiency;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -29,6 +30,8 @@ public class Department extends BaseEntity {
 
     @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Report> reports;
+
+
 
     public void addReport(Report report) throws MyException {
         if (Objects.isNull(report)) {

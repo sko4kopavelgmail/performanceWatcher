@@ -26,6 +26,9 @@ public class Faculty extends BaseEntity {
     @OneToMany(mappedBy = "faculty", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Department> departments;
 
+    @OneToMany(mappedBy = "faculty", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Report> reports;
+
     public void addDepartment(Department department) throws MyException {
         if (Objects.isNull(department)) {
             throw new MyException("Переданный аргумент нулевой");

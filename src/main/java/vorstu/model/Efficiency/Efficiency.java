@@ -7,6 +7,7 @@ import vorstu.model.BaseEntity.BaseEntity;
 import vorstu.model.Efficiency.parts.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Setter
