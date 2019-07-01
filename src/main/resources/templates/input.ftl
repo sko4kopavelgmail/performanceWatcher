@@ -8,13 +8,12 @@
                 <option value="${direction.id}">${direction.name}</option>
             </#list>
         </select>
-
         <div class="ml-3">
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Отчетный год</span>
                 </div>
-                <input type="text" class="form-control" placeholder="2019">
+                <input type="text" class="form-control" name="year" placeholder="2019">
                 <div class="input-group-append">
                     <span class="input-group-text">Год</span>
                 </div>
@@ -38,13 +37,17 @@
             <a class="nav-link" id="contact-tab" data-toggle="tab" href="#other" role="tab" aria-controls="contact"
                aria-selected="false">Прочее</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#minMeans" role="tab" aria-controls="contact"
+               aria-selected="false">Пороговые значения</a>
+        </li>
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="mt-4"> Распределение приема студентов по направлениям подготовки и специальностям</h4>
-                    <table class="table table-striped mt-2">
+                    <h5 class="mt-4"> Распределение приема студентов по направлениям подготовки и специальностям</h5>
+                    <table class="table-sm table table-striped mt-2">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -476,7 +479,73 @@
                             <td><input type="text" id="2415s" name="2415s"></td>
                         </tr>
                         <tr>
-                            <th scope="row">18</th>
+                            <th scope="row">18.1</th>
+                            <td><label for="2410134">
+                                Средний балл ЕГЭ (с учетом
+                                результатов дополнительных
+                                испытаний) принятых по результатам
+                                ЕГЭ и дополнительных испытаний студентов, принятых
+                                на обучение за счет
+                                бюджетов бюджетной системы Российской Федерации
+                                <div class="help" data-title="Б - Программа бакалавриата, С - Программа специалитета">
+                                    (Б) *
+                                </div>
+                            </label></td>
+                            <td><input type="text" id="2410134" name="2410134"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">18.2</th>
+                            <td>
+                                <label for="2410234">
+                                    Средний балл ЕГЭ (с учетом
+                                    результатов дополнительных
+                                    испытаний) принятых по результатам
+                                    ЕГЭ и дополнительных испытаний студентов, принятых
+                                    на обучение за счет
+                                    бюджетов бюджетной системы Российской Федерации
+                                    <div class="help"
+                                         data-title="Б - Программа бакалавриата, С - Программа специалитета">
+                                        (C) *
+                                    </div>
+                                </label>
+                            </td>
+                            <td><input type="text" id="2410234" name="2410234"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">19.1</th>
+                            <td><label for="2410135">
+                                Средний балл ЕГЭ (с учетом
+                                результатов дополнительных
+                                испытаний) принятых по результатам
+                                ЕГЭ и дополнительных испытаний студентов, принятых
+                                на места по договорам об оказании
+                                платных образовательных услуг
+                                <div class="help" data-title="Б - Программа бакалавриата, С - Программа специалитета">
+                                    (Б) *
+                                </div>
+                            </label></td>
+                            <td><input type="text" id="2410135" name="2410135"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">19.2</th>
+                            <td>
+                                <label for="2410235">
+                                    Средний балл ЕГЭ (с учетом
+                                    результатов дополнительных
+                                    испытаний) принятых по результатам
+                                    ЕГЭ и дополнительных испытаний студентов, принятых
+                                    на места по договорам об оказании
+                                    платных образовательных услуг
+                                    <div class="help"
+                                         data-title="Б - Программа бакалавриата, С - Программа специалитета">
+                                        (C) *
+                                    </div>
+                                </label>
+                            </td>
+                            <td><input type="text" id="2410235" name="2410235"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">20</th>
                             <td>
                                 <label for="241035">
                                     Общая численность принятых на обучение студентов по программе магистратуры
@@ -485,7 +554,7 @@
                             <td><input type="text" id="241035" name="241035"></td>
                         </tr>
                         <tr>
-                            <th scope="row">19</th>
+                            <th scope="row">21</th>
                             <td>
                                 <label for="2410312">
                                     Общая численность принятых на обучение студентов по программе магистратуры, ранее
@@ -495,7 +564,7 @@
                             <td><input type="text" id="2410312" name="2410312"></td>
                         </tr>
                         <tr>
-                            <th scope="row">20</th>
+                            <th scope="row">22</th>
                             <td>
                                 <label for="2420312">
                                     Общая численность студентов, обучающихся по программе магистратуры
@@ -504,7 +573,7 @@
                             <td><input type="text" id="2420312" name="2420312"></td>
                         </tr>
                         <tr>
-                            <th scope="row">21</th>
+                            <th scope="row">23</th>
                             <td>
                                 <label for="2420318">
                                     Общая численность студентов, обучающихся по программе магистратуры, ранее
@@ -514,7 +583,7 @@
                             <td><input type="text" id="2420318" name="2420318"></td>
                         </tr>
                         <tr>
-                            <th scope="row">22</th>
+                            <th scope="row">24</th>
                             <td>
                                 <label for="2420417E">
                                     Общая численность студентов, обучающихся по направлениям подготовки "Инженерное
@@ -525,7 +594,7 @@
                             <td><input type="text" id="2420417E" name="2420417E"></td>
                         </tr>
                         <tr>
-                            <th scope="row">23</th>
+                            <th scope="row">25</th>
                             <td>
                                 <label for="2420412E">
                                     Общая численность студентов, обучающихся по направлениям подготовки "Инженерное
@@ -536,7 +605,7 @@
                             <td><input type="text" id="2420412E" name="2420412E"></td>
                         </tr>
                         <tr>
-                            <th scope="row">24</th>
+                            <th scope="row">26</th>
                             <td>
                                 <label for="2420417">
                                     Общая численность студентов, заключившие договоры о целевом обучении
@@ -545,7 +614,7 @@
                             <td><input type="text" id="2420417" name="2420417"></td>
                         </tr>
                         <tr>
-                            <th scope="row">25</th>
+                            <th scope="row">27</th>
                             <td>
                                 <label for="2420412">
                                     Общая численность студентов
@@ -554,9 +623,10 @@
                             <td><input type="text" id="2420412" name="2420412"></td>
                         </tr>
                     </table>
-                    <h4 class="mt-4">Общая характеристика основных образовательных программ и подготовки научных кадров,
-                        реализуемых организацией</h4>
-                    <table class="table table-striped mt-2">
+                    <br/>
+                    <h5 class="mt-4">Общая характеристика основных образовательных программ и подготовки научных кадров,
+                        реализуемых организацией</h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -612,13 +682,14 @@
                             <th><input type="text" name="211009"></th>
                         </tr>
                     </table>
-                    <h4 class="mt-4">Распределение приема граждан иностранных государств в соответствии с
+                    <br/>
+                    <h5 class="mt-4">Распределение приема граждан иностранных государств в соответствии с
                         международными договорами Российской Федерации, федеральными законами или
                         установленной Правительством Российской Федерации квотой на образование иностранных граждан и
                         лиц без гражданства в Российской Федерации по
                         направлениям подготовки и специальностям
-                    </h4>
-                    <table class="table table-striped mt-2">
+                    </h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -639,14 +710,15 @@
                             <th><input type="text" name="2446"></th>
                         </tr>
                     </table>
-                    <h4 class="mt-4">
+                    <br/>
+                    <h5 class="mt-4">
                         Распределение численности студентов из числа граждан иностранных государств,
                         обучающихся в соответствии с международными договорами Российской
                         Федерации, федеральными законами или установленной Правительством Российской Федерации квотой на
                         образование иностранных граждан и лиц без
                         гражданства в Российской Федерации, по направлениям подготовки и специальностям
-                    </h4>
-                    <table class="table table-striped mt-2">
+                    </h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -683,10 +755,11 @@
                             <th></th>
                         </tr>
                     </table>
-                    <h4 class="mt-4">
+                    <br/>
+                    <h5 class="mt-4">
                         Численность обучающихся по программам подготовки кадров высшей квалификации
-                    </h4>
-                    <table class="table table-striped mt-2">
+                    </h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -717,10 +790,11 @@
                             <th><input type="text" name="2510318"></th>
                         </tr>
                     </table>
-                    <h4 class="mt-4">
+                    <br/>
+                    <h5 class="mt-4">
                         Сведения о дополнительном профессиональном образовании
-                    </h4>
-                    <table class="table table-striped mt-2">
+                    </h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -749,9 +823,9 @@
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="mt-4">Результаты научной, научно-технической и инновационной деятельности
-                        (публикационная, издательская активность)</h4>
-                    <table class="mt-2 table table-striped">
+                    <h5 class="mt-4">Результаты научной, научно-технической и инновационной деятельности
+                        (публикационная, издательская активность)</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -845,8 +919,9 @@
                             <td><input type="text" id="3241603" name="3241603"></td>
                         </tr>
                     </table>
-                    <h4 class="mt-4">Выполненный объем работ</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4">Выполненный объем работ</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -874,10 +949,25 @@
                             <td><input type="text" id="321023" name="321023"></td>
                             <td><input type="text" id="321024" name="321024"></td>
                         </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>
+                                <label for="3210803">
+                                    Объем средств, поступивших (за отчетный год) от выполнения работ,
+                                    услуг, связанных с научными, научно-техническими, творческими
+                                    услугами и разработками (без НДС, акцизов и других аналогичных
+                                    платежей) в том числе: услуги в области художественного, литературного и
+                                    исполнительского творчества и их организации (творческие проекты)
+                                </label>
+                            </td>
+                            <td><input type="text" id="3210803" name="3210803"></td>
+                            <td></td>
+                        </tr>
                     </table>
-                    <h4 class="mt-4">Распределение объема средств организации по источникам их получения и по видам
-                        деятельности</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4">Распределение объема средств организации по источникам их получения и по видам
+                        деятельности</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -919,9 +1009,10 @@
                             <td></td>
                         </tr>
                     </table>
-                    <h4 class="mt-4">Использование результатов интеллектуальной деятельности (коммерциализация
-                        технологий)</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4">Использование результатов интеллектуальной деятельности (коммерциализация
+                        технологий)</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -937,8 +1028,9 @@
                             <td><input type="text" id="32606" name="32606"></td>
                         </tr>
                     </table>
-                    <h4 class="mt-4">Сведения о молодых ученых (на 01 октября отчетного года)</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4">Сведения о молодых ученых (на 01 октября отчетного года)</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -986,8 +1078,9 @@
                             <td><input type="text" id="450404" name="450404"></td>
                         </tr>
                     </table>
-                    <h4 class="mt-4">Сведения о присуждении ученых степеней работникам</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4">Сведения о присуждении ученых степеней работникам</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -1016,15 +1109,15 @@
                             <td><input type="text" id="440507" name="440507"></td>
                         </tr>
                     </table>
+                    <br/>
                 </div>
             </div>
         </div>
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="card">
                 <div class="card-body">
-
-                    <h4 class="mt-4">Распределение численности студентов, приема и выпуска по гражданству</h4>
-                    <table class="mt-2 table table-striped">
+                    <h5 class="mt-4">Распределение численности студентов, приема и выпуска по гражданству</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -1198,12 +1291,12 @@
                             <td><input size="4" type="text" id="2470314ZP" name="2470314ZP"></td>
                         </tr>
                     </table>
-
-                    <h4 class="mt-4">Распределение численности студентов образовательной организации, обучающихся по
+                    <br/>
+                    <h5 class="mt-4">Распределение численности студентов образовательной организации, обучающихся по
                         очной форме обучения, прошедших обучение в других образовательных
                         организациях
-                    </h4>
-                    <table class="mt-2 table table-striped">
+                    </h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -1244,8 +1337,9 @@
                             <th><input type="text" name="2480411" id="2480411"></th>
                         </tr>
                     </table>
-                    <h4 class="mt-4">Сведения об иностранных работниках</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4">Сведения об иностранных работниках</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -1288,9 +1382,10 @@
 
                         </tr>
                     </table>
-                    <h4 class="mt-4">Распределение численности основного персонала и внешних совместителей по уровню
-                        образования</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4">Распределение численности основного персонала и внешних совместителей по уровню
+                        образования</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -1328,9 +1423,10 @@
                             <th><input type="text" name="4120415" id="4120415"></th>
                         </tr>
                     </table>
-                    <h4 class="mt-4"> Численность обучающихся по программам подготовки кадров высшей квалификации, прием
-                        и выпуск</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4"> Численность обучающихся по программам подготовки кадров высшей квалификации, прием
+                        и выпуск</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -1358,9 +1454,10 @@
                             <td><input id="2510316" name="2510316"></td>
                         </tr>
                     </table>
-                    <h4 class="mt-4"> Общая характеристика основных образовательных программ и подготовки научных
-                        кадров, реализуемых организацией</h4>
-                    <table class="mt-2 table table-striped">
+                    <br/>
+                    <h5 class="mt-4"> Общая характеристика основных образовательных программ и подготовки научных
+                        кадров, реализуемых организацией</h5>
+                    <table class="mt-2 table table-striped table-sm">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -1384,17 +1481,16 @@
                             <td><input id="211006" name="211006"></td>
                         </tr>
                     </table>
-
+                    <br/>
                 </div>
             </div>
         </div>
         <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="contact-tab">
             <div class="card">
                 <div class="card-body">
-
-                    <h4 class="mt-4">Сведения об ученых степенях профессорско-преподавательского состава и научных
-                        работников</h4>
-                    <table class="table table-striped mt-2">
+                    <h5 class="mt-4">Сведения об ученых степенях профессорско-преподавательского состава и научных
+                        работников</h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -1544,10 +1640,9 @@
                             <th><input size="2" type="text" name="116"></th>
                         </tr>
                     </table>
-
-
-                    <h4 class="mt-4">Общая численность студентов</h4>
-                    <table class="table table-striped mt-2">
+                    <br/>
+                    <h5 class="mt-4">Общая численность студентов</h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -1582,15 +1677,15 @@
                             <th><input type="text" name="242ZF"></th>
                         </tr>
                     </table>
-
-                    <h4 class="mt-4">
+                    <br/>
+                    <h5 class="mt-4">
                         Распределение численности студентов из числа граждан иностранных государств, обучающихся в
                         соответствии с международными договорами Российской
                         Федерации, федеральными законами или установленной Правительством Российской Федерации квотой на
                         образование иностранных граждан и лиц без
                         гражданства в Российской Федерации, по направлениям подготовки и специальностям
-                    </h4>
-                    <table class="table table-striped mt-2">
+                    </h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -1626,9 +1721,9 @@
                         </tr>
 
                     </table>
-
-                    <h4 class="mt-4">Распределение выпуска по направлениям подготовки и специальностям</h4>
-                    <table class="table table-striped mt-2">
+                    <br/>
+                    <h5 class="mt-4">Распределение выпуска по направлениям подготовки и специальностям</h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -1657,14 +1752,14 @@
                             <th><input type="text" name="243045Z"></th>
                         </tr>
                     </table>
-
-                    <h4 class="mt-4">
+                    <br/>
+                    <h5 class="mt-4">
                         Распределение выпуска граждан иностранных государств, обучавшихся в соответствии с
                         международными договорами Российской Федерации, федеральными
                         законами или установленной Правительством Российской Федерации квотой на образование иностранных
                         граждан и лиц без гражданства в Российской Федерации,
-                        по направлениям подготовки и специальностям</h4>
-                    <table class="table table-striped mt-2">
+                        по направлениям подготовки и специальностям</h5>
+                    <table class="table table-striped mt-2 table-sm">
                         <thead>
                         <tr>
                             <th scope="col">
@@ -1693,8 +1788,38 @@
                             <th><input type="text" name="246045Z"></th>
                         </tr>
                     </table>
-
-
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="minMeans" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="mt-4">Пороговые значения</h5>
+                    <table class="table table-striped mt-2 table-sm">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+                                Показатель
+                            </th>
+                            <th scope="col">
+                                Значение
+                            </th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">Образовательная деятельность</th>
+                            <th><input type="text" name="educationMinMean"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Научно-исследовательская деятельность</th>
+                            <th><input type="text" name="researchMinMean"></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Международная деятельность</th>
+                            <th><input type="text" name="internationalMinMean"></th>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

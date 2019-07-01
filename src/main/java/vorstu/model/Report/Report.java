@@ -21,8 +21,7 @@ public class Report extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "faculty_id")
-    private Department faculty;
-
+    private Faculty faculty;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "department_id")
@@ -32,6 +31,6 @@ public class Report extends BaseEntity {
     @JoinColumn(name = "efficiency_id")
     private Efficiency efficiency;
 
-    private Date period;
+    private int period;
 
 }

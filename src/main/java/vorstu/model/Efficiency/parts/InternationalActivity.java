@@ -16,7 +16,6 @@ import java.util.Objects;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 public class InternationalActivity extends BaseEntity implements BasePart{
 
     @Id
@@ -30,6 +29,11 @@ public class InternationalActivity extends BaseEntity implements BasePart{
     private Double mean;
 
     private Double minMean;
+
+    public InternationalActivity() {
+        mean = 0.0;
+        minMean = 0.0;
+    }
 
     @OneToMany(mappedBy = "internationalActivity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Index> indices;

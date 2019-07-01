@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import vorstu.model.BaseEntity.BaseEntity;
 import vorstu.model.Efficiency.parts.*;
+import vorstu.model.Report.Department;
+import vorstu.model.Report.Faculty;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -30,6 +32,5 @@ public class Efficiency extends BaseEntity {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "researchActivity_id")
     private ResearchActivity researchActivity;
-
 
 }

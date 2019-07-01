@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import vorstu.model.Efficiency.parts.EducationActivity;
+import vorstu.model.Efficiency.parts.InternationalActivity;
+import vorstu.model.Efficiency.parts.ResearchActivity;
 
 import javax.persistence.*;
 
@@ -19,6 +21,7 @@ public class Index {
 
     private String shortName;
 
+    @Column(length = 1000)
     private String name;
 
     private String unit;
@@ -31,9 +34,9 @@ public class Index {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "research_id")
-    private EducationActivity researchActivity;
+    private ResearchActivity researchActivity;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "international_id")
-    private EducationActivity internationalActivity;
+    private InternationalActivity internationalActivity;
 }

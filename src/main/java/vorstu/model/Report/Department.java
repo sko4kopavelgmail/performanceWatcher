@@ -31,8 +31,6 @@ public class Department extends BaseEntity {
     @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Report> reports;
 
-
-
     public void addReport(Report report) throws MyException {
         if (Objects.isNull(report)) {
             throw new MyException("Добавление несуществующего отчета");

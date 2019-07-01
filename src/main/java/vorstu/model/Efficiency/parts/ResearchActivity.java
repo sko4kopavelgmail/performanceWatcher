@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-@NoArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -30,6 +29,11 @@ public class ResearchActivity extends BaseEntity implements BasePart{
     private Double mean;
 
     private Double minMean;
+
+    public ResearchActivity() {
+        mean = 0.0;
+        minMean = 0.0;
+    }
 
     @OneToMany(mappedBy = "researchActivity", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Index> indices;
