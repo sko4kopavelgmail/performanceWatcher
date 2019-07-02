@@ -8,17 +8,6 @@
                 <option value="${direction.id}">${direction.name}</option>
             </#list>
         </select>
-        <div class="ml-3">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Отчетный год</span>
-                </div>
-                <input type="text" class="form-control" name="year" placeholder="2019">
-                <div class="input-group-append">
-                    <span class="input-group-text">Год</span>
-                </div>
-            </div>
-        </div>
     </div>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">

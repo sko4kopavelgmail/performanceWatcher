@@ -53,10 +53,6 @@ public class CalculateService {
     public EducationActivity calculateEducationActivity(Map<String, String> form) {
         EducationActivity educationActivity = new EducationActivity();
 
-        //Min mean
-        Double min = getDoubleFromString(form.get("educationMinMean"));
-        educationActivity.setMinMean(min);
-
         //1.1
         Double _2410118 = getDoubleFromString(form.get("24118b"));
         Double _2410218 = getDoubleFromString(form.get("24118s"));
@@ -334,10 +330,6 @@ public class CalculateService {
         InternationalActivity internationalActivity = new InternationalActivity();
         Double mean, numerator, denumerator;
 
-        //Min mean
-        Double min = getDoubleFromString(form.get("internationalMinMean"));
-        internationalActivity.setMinMean(min);
-
         //3.1
         Double _2470409O = getDoubleFromString(form.get("2470409O"));
         Double _2470409V = getDoubleFromString(form.get("2470409V"));
@@ -525,10 +517,6 @@ public class CalculateService {
     public ResearchActivity calculateResearchActivity(Map<String, String> form) {
         ResearchActivity researchActivity = new ResearchActivity();
 
-        //Min mean
-        Double min = getDoubleFromString(form.get("researchMinMean"));
-        researchActivity.setMinMean(min);
-
         //2.1
         Double _324191 = getDoubleFromString(form.get("324191"));
         Double mean = _324191 / R;
@@ -665,16 +653,19 @@ public class CalculateService {
         EducationActivity educationActivity = calculateEducationActivity(form);
         educationActivity.setName("Образовательная деятельность");
         educationActivity.setShortName("E.1");
+        educationActivity.setMinMean(getDoubleFromString(form.get("educationMinMean")));
         educationActivityRepo.save(educationActivity);
 
         ResearchActivity researchActivity = calculateResearchActivity(form);
         researchActivity.setName("Научно-исследовательская деятельность");
         researchActivity.setShortName("E.2");
+        researchActivity.setMinMean(getDoubleFromString(form.get("researchMinMean")));
         researchActivityRepo.save(researchActivity);
 
         InternationalActivity internationalActivity = calculateInternationalActivity(form);
         internationalActivity.setName("Международная деятельность");
         internationalActivity.setShortName("E.3");
+        internationalActivity.setMinMean(getDoubleFromString(form.get("internationalMinMean")));
         internationalActivityRepo.save(internationalActivity);
 
         Efficiency efficiency = new Efficiency();

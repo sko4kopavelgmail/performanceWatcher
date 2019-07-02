@@ -16,10 +16,8 @@ import vorstu.model.Report.Department;
 import vorstu.model.Report.Faculty;
 import vorstu.model.Report.Report;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Controller
 public class PerformanceController {
@@ -48,11 +46,41 @@ public class PerformanceController {
      */
     @GetMapping("/performance")
     public String loadPerformance(Model model) {
-        List<Faculty> faculties = facultyService.findAll();
-        model.addAttribute("faculties", faculties);
+        List<Efficiency> efficiencies = new ArrayList<>();
+        List<Report> departmentReports = new ArrayList<>();
+        for (Faculty faculty : facultyService.findAll()) {
+            departmentReports.addAll(reportService.findAllByFaculty(faculty));
+            if (departmentReports.size() != 0)
+                efficiencies.add(efficiencyService.getAverageEfficiency(departmentReports));
+        }
+        if (efficiencies.size() == 0) {
+            model.addAttribute("noData", true);
+        } else {
+            model.addAttribute("uni", efficiencyService.getUniEfficiency(efficiencies));
+        }
         return "performance";
     }
 
+    @GetMapping("/faculties")
+    public String loadFaculties(Model model) {
+        List<Report> departmentReports = new ArrayList<>();
+        Map<Double, Faculty> map = new LinkedHashMap<>();
+
+        for (Faculty faculty : facultyService.findAll()) {
+            departmentReports.addAll(reportService.findAllByFaculty(faculty));
+            Efficiency efficiency = efficiencyService.getAverageEfficiency(departmentReports);
+            Double d = efficiencyService.getFacultyScope(efficiency);
+            map.put(d, faculty);
+            departmentReports.clear();
+        }
+
+        Map<Double, Faculty> treeMap = new TreeMap<>(map);
+
+        List<Faculty> faculties = new ArrayList<>(treeMap.values());
+
+        model.addAttribute("faculties", faculties);
+        return "faculties";
+    }
 
     @GetMapping("/input")
     public String loadCalculatePage(Model model) {
@@ -67,16 +95,15 @@ public class PerformanceController {
         return "redirect:/performance";
     }
 
-
     @GetMapping("performance/{faculty}")
     public String getPerformancePage(@PathVariable Faculty faculty, Model model) {
         List<Report> departmentReports = reportService.findAllByFaculty(faculty);
         Efficiency facultyEfficiency = efficiencyService.getAverageEfficiency(departmentReports);
         List<Department> departments = departmentService.findAllByFaculty(faculty);
 
-        if (departmentReports.size() == 0){
-            model.addAttribute("noData",true);
-        }else {
+        if (departmentReports.size() == 0) {
+            model.addAttribute("noData", true);
+        } else {
             model.addAttribute("facultyEfficiency", facultyEfficiency);
             model.addAttribute("faculty", faculty);
             model.addAttribute("departments", departments);

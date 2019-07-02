@@ -5,7 +5,7 @@
         <#if noData??>
             <h4>По выбранному факультету нет данных</h4>
         <#else>
-             <h4 class="mt-4 mb-4 text-center">Сведения по показателям мониторинга эффективности
+            <h4 class="mt-4 mb-4 text-center">Сведения по показателям мониторинга эффективности
                  деятельности ${faculty.getName()}</h4>
             <table class="table table-sm table-striped mt-2">
                 <thead>
